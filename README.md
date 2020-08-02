@@ -10,6 +10,60 @@ Installation
     npm install barnowl-minew
 
 
+Hello barnowl-minew!
+--------------------
+
+The following code will listen to _simulated_ hardware and output packets to the console:
+
+```javascript
+const BarnowlMinew = require('barnowl-minew');
+
+let barnowl = new BarnowlMinew();
+
+barnowl.addListener(BarnowlMinew.TestListener, {});
+
+barnowl.on('raddec', function(raddec) {
+  console.log(raddec);
+});
+```
+
+
+Supported Listener Interfaces
+-----------------------------
+
+The following listener interfaces are supported.
+
+### HTTP
+
+The _recommended_ implementation is using [express](https://expressjs.com/) as follows:
+
+```javascript
+const express = require('express');
+const http = require('http');
+
+let app = express();
+let server = http.createServer(app);
+server.listen(3001, function() { console.log('Listening on port 3001'); });
+
+let options = { app: app, express: express, route: "/minew" };
+barnowl.addListener(BarnowlMinew.HttpListener, options);
+```
+
+Nonetheless, for testing purposes, __barnowl-minew__ can also create a minimal HTTP server as an alternative to express, and attempt to handle any POST it receives:
+
+```javascript
+barnowl.addListener(BarnowlMinew.HttpListener, { port: 3001 });
+```
+
+### Test
+
+Provides a steady stream of simulated Minew packets for testing purposes.
+
+```javascript
+barnowl.addListener(BarnowlMinew.TestListener, {});
+```
+
+
 License
 -------
 
