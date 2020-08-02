@@ -1,0 +1,35 @@
+{
+  "name": "barnowl-minew",
+  "homepage": "https://github.com/reelyactive/barnowl-minew/",
+  "author": "reelyActive <webdev@reelyactive.com>",
+  "description": "Interface Minew gateways with barnowl open source software.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "barnowl",
+    "Minew",
+    "Minew G1"
+  ],
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/barnowlminew.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/barnowl-minew.git"
+  },
+  "dependencies": {
+    "advlib-identifier": ">=0.1.0",
+    "raddec": ">=0.2.5"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/barnowl-minew/issues"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Dungen"
+    }
+  ],
+  "license": "MIT"
+}
