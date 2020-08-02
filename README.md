@@ -64,6 +64,22 @@ barnowl.addListener(BarnowlMinew.TestListener, {});
 ```
 
 
+Minew G1 Service Parameters
+---------------------------
+
+Use the following service parameters for the Minew G1 gateway:
+
+| Property            | Value                             | 
+|:--------------------|:----------------------------------|
+| Service Access      | HTTP                              |
+| Upload Interval     | 1 second (RECOMMENDED)            |
+| Url                 | http://xxx.xxx.xxx.xxx:3001/minew |
+| Authentication Type | none                              |
+| BLE Data Format     | Binary / Long                     |
+
+For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
+
+
 License
 -------
 
