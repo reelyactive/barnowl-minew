@@ -10,6 +10,14 @@ Installation
     npm install barnowl-minew
 
 
+Quick Start
+-----------
+
+    npm start
+
+__barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001 and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+
+
 Hello barnowl-minew!
 --------------------
 

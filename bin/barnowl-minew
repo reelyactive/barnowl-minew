@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const BarnowlMinew = require('../lib/barnowlminew.js');
+
+let barnowl = new BarnowlMinew();
+
+barnowl.addListener(BarnowlMinew.HttpListener, { port: 3001 });
+
+barnowl.on('raddec', function(raddec) {
+  console.log(raddec.toFlattened());
+});
