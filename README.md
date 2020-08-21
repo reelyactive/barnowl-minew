@@ -89,6 +89,8 @@ Use the following service parameters for the Minew G1 gateway:
 
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
+__barnowl-minew__ requires firmware __v3.1.3__ or later on the Minew G1 gateway to correctly interpret the transmitterIdType.
+
 
 License
 -------
