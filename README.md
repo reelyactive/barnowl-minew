@@ -17,7 +17,7 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-See our tutorial [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/).  __barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001 and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+See our tutorial [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/).  __barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001/minew and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
 
 
 Hello barnowl-minew!
