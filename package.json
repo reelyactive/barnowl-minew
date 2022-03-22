@@ -2,14 +2,15 @@
   "name": "barnowl-minew",
   "homepage": "https://github.com/reelyactive/barnowl-minew/",
   "author": "reelyActive <webdev@reelyactive.com>",
-  "description": "Interface Minew gateways with barnowl open source software.  We believe in an open Internet of Things.",
+  "description": "Collect ambient Bluetooth Low Energy packets from Minew gateways for real-time location and sensing.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "barnowl",
     "Minew",
-    "Minew G1"
+    "Minew G1",
+    "raddec"
   ],
-  "version": "0.1.3",
+  "version": "0.1.4",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -23,7 +24,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.5"
+    "raddec": ">=0.2.8"
   },
   "devDependencies": {},
   "bugs": {
