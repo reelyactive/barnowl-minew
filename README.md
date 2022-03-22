@@ -128,6 +128,20 @@ For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the serv
 __barnowl-minew__ requires firmware __v3.1.3__ or later on the Minew G1 gateway to correctly interpret the transmitterIdType.
 
 
+Contributing
+------------
+
+Discover [how to contribute](CONTRIBUTING.md) to this open source project which upholds a standard [code of conduct](CODE_OF_CONDUCT.md).
+
+
+Security
+--------
+
+Consult our [security policy](SECURITY.md) for best practices using this open source software and to report vulnerabilities.
+
+[![Known Vulnerabilities](https://snyk.io/test/github/reelyactive/barnowl-minew/badge.svg)](https://snyk.io/test/github/reelyactive/barnowl-minew)
+
+
 License
 -------
 
