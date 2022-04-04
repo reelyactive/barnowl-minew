@@ -91,7 +91,8 @@ let app = express();
 let server = http.createServer(app);
 server.listen(3001, function() { console.log('Listening on port 3001'); });
 
-let options = { app: app, express: express, route: "/minew" };
+let options = { app: app, express: express, route: "/minew",
+                isPreOctetStream: false }; // Set true for G1 firmware v2/3
 barnowl.addListener(BarnowlMinew.HttpListener, options);
 ```
 
@@ -124,6 +125,8 @@ Use the following service parameters for the Minew G1 gateway:
 | BLE Data Format     | Binary / Long                     |
 
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
+
+__barnowl-minew__ expects firmware __v4.x.x__ or later on the Minew G1 gateway to correctly process binary data as _application/octet-stream_.  For firmware __v2.x.x__ and __v3.x.x__, set the isPreOctetStream option to `true` as in the HTTP example above, in order to accept binary data as _application/json_, as it is (incorrectly) sent by the gateway.
 
 __barnowl-minew__ requires firmware __v3.1.3__ or later on the Minew G1 gateway to correctly interpret the transmitterIdType.
 

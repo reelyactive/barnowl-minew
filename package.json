@@ -10,7 +10,7 @@
     "Minew G1",
     "raddec"
   ],
-  "version": "0.1.4",
+  "version": "1.0.0",
   "engines": {
     "node": ">=6.0.0"
   },
