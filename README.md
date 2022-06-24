@@ -1,7 +1,7 @@
 barnowl-minew
 =============
 
-__barnowl-minew__ converts Bluetooth Low Energy decodings from [Minew gateways](https://www.minew.com/ble-wifi-gateway) into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
+__barnowl-minew__ converts Bluetooth Low Energy decodings from [Minew](https://www.minew.com/) G1 and G2 gateways into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
 - RFID: _what_ is present, based on the device identifier?
 - RTLS: _where_ is it relative to the receiving devices?
 - M2M: _how_ is its status, based on any payload included in the packet?
@@ -129,6 +129,22 @@ For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the serv
 __barnowl-minew__ expects firmware __v4.x.x__ or later on the Minew G1 gateway to correctly process binary data as _application/octet-stream_.  For firmware __v2.x.x__ and __v3.x.x__, set the isPreOctetStream option to `true` as in the HTTP example above, in order to accept binary data as _application/json_, as it is (incorrectly) sent by the gateway.
 
 __barnowl-minew__ requires firmware __v3.1.3__ or later on the Minew G1 gateway to correctly interpret the transmitterIdType.
+
+
+Minew G2 Service Parameters
+---------------------------
+
+Use the following service parameters for the Minew G2 gateway:
+
+| Property            | Value                             | 
+|:--------------------|:----------------------------------|
+| Service Access      | HTTP                              |
+| Upload Interval     | 100 milliseconds (RECOMMENDED)    |
+| Url                 | http://xxx.xxx.xxx.xxx:3001/minew |
+| Authentication Type | none                              |
+| BLE Data Format     | JSON-RAW                          |
+
+For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
 
 Contributing
