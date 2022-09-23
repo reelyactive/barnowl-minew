@@ -10,7 +10,7 @@
     "Minew G1",
     "raddec"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.8"
+    "raddec": ">=0.4.2"
   },
   "devDependencies": {},
   "bugs": {
