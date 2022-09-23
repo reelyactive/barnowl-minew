@@ -142,7 +142,7 @@ Use the following service parameters for the Minew G2 gateway:
 | Upload Interval     | 100 milliseconds (RECOMMENDED)    |
 | Url                 | http://xxx.xxx.xxx.xxx:3001/minew |
 | Authentication Type | none                              |
-| BLE Data Format     | JSON-RAW                          |
+| BLE Data Format     | JSON-RAW or MINEW-CONNECT         |
 
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
