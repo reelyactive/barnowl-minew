@@ -1,12 +1,11 @@
 barnowl-minew
 =============
 
-__barnowl-minew__ converts Bluetooth Low Energy decodings from [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
-- RFID: _what_ is present, based on the device identifier?
-- RTLS: _where_ is it relative to the receiving devices?
-- M2M: _how_ is its status, based on any payload included in the packet?
+__barnowl-minew__ converts the decodings of any ambient Bluetooth Low Energy devices by [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into standard software-developer-friendly JSON that is vendor/technology/application-agnostic.
 
-__barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-minew) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
+![Overview of barnowl-minew](https://reelyactive.github.io/barnowl-minew/images/overview.png)
+
+__barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-minew) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed below.
 
 
 Installation
