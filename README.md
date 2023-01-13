@@ -1,7 +1,7 @@
 barnowl-minew
 =============
 
-__barnowl-minew__ converts Bluetooth Low Energy decodings from [Minew](https://www.minew.com/) G1 and G2 gateways into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
+__barnowl-minew__ converts Bluetooth Low Energy decodings from [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
 - RFID: _what_ is present, based on the device identifier?
 - RTLS: _where_ is it relative to the receiving devices?
 - M2M: _how_ is its status, based on any payload included in the packet?
@@ -147,6 +147,24 @@ Use the following service parameters for the Minew G2 gateway:
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
 
+Minew MG3 & MG4 Service Parameters
+----------------------------------
+
+Use the following service parameters for the Minew G2 gateway:
+
+| Property            | Value                             | 
+|:--------------------|:----------------------------------|
+| Service Access      | HTTP                              |
+| Upload Interval     | 1 second (RECOMMENDED)            |
+| Url                 | http://xxx.xxx.xxx.xxx:3001/minew |
+| Authentication Type | none                              |
+| BLE Data Format     | (JSON-LONG)                       |
+
+For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
+
+The JSON-LONG data format (which is the default and only option) does not specify the transmitterIdType (EUI-48 or RND-48) and therefore the raddec output will always have a transmitterIdType of 0, which represents "unknown".
+
+
 Contributing
 ------------
 
@@ -166,7 +184,7 @@ License
 
 MIT License
 
-Copyright (c) 2020-2022 [reelyActive](https://www.reelyactive.com)
+Copyright (c) 2020-2023 [reelyActive](https://www.reelyactive.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
