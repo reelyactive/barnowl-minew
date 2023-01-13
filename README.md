@@ -150,7 +150,7 @@ For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the serv
 Minew MG3 & MG4 Service Parameters
 ----------------------------------
 
-Use the following service parameters for the Minew G2 gateway:
+Use the following service parameters for the Minew MG3 & MG4 gateways:
 
 | Property            | Value                             | 
 |:--------------------|:----------------------------------|
@@ -162,7 +162,7 @@ Use the following service parameters for the Minew G2 gateway:
 
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
-The JSON-LONG data format (which is the default and only option) does not specify the transmitterIdType (EUI-48 or RND-48) and therefore the raddec output will always have a transmitterIdType of 0, which represents "unknown".
+The JSON-LONG data format (which is the default and only option) does not specify the transmitterIdType (public or random address) and therefore the raddec output will always have a transmitterIdType of 0, which represents "unknown".
 
 
 Contributing
