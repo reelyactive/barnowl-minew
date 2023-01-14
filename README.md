@@ -11,10 +11,11 @@ __barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/packa
 Getting Started
 ---------------
 
-Follow our step-by-step tutorials to get started using a specific Minew gateway:
+Follow our step-by-step tutorials to get started with __barnowl-minew__ or __Pareto Anywhere__ using a _specific_ Minew gateway:
 - [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/)
 
-Learn "owl" about the __raddec__ JSON data structure that is output by __barnowl-minew__ using the [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/).
+Learn "owl" about the __raddec__ JSON data output:
+-  [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/).
 
 
 Quick Start
@@ -34,21 +35,23 @@ __barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001/mine
 Hello barnowl-minew!
 --------------------
 
-The following code will listen to _simulated_ hardware and output packets to the console:
+Developing an application directly from __barnowl-minew__?  Start by pasting the code below into a file called server.js:
 
 ```javascript
+const Barnowl = require('barnowl');
 const BarnowlMinew = require('barnowl-minew');
 
-let barnowl = new BarnowlMinew();
+let barnowl = new Barnowl({ enableMixing: true });
 
-barnowl.addListener(BarnowlMinew.TestListener, {});
+barnowl.addListener(BarnowlMinew, {}, BarnowlMinew.TestListener, {});
 
-barnowl.on('raddec', function(raddec) {
+barnowl.on('raddec', (raddec) => {
   console.log(raddec);
+  // Trigger your application logic here
 });
 ```
 
-As output you should see a stream of [raddec](https://github.com/reelyactive/raddec/) objects similar to the following:
+From the same folder as the server.js file, install package dependencies with the commands `npm install barnowl-minew` and `npm install barnowl`.  Then run the code with the command `node server.js` and observe the _simulated_ data stream of radio decodings (raddec objects) output to the console:
 
 ```javascript
 {
@@ -67,7 +70,7 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
 }
 ```
 
-Regardless of the underlying RF protocol and hardware, the [raddec](https://github.com/reelyactive/raddec/) specifies _what_ (transmitterId) is _where_ (receiverId & rssi), as well as _how_ (packets) and _when_ (timestamp).
+See the [Supported Listener Interfaces](#supported-listener-interfaces) below to adapt the code for listen for your gateway(s).
 
 
 Is that owl you can do?
@@ -77,13 +80,13 @@ While __barnowl-minew__ may suffice standalone for simple real-time applications
 - [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
 - [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
 
-These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes several __barnowl-x__ listeners.
+These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes a variety of __barnowl-x__ listeners, APIs and interactive web apps.
 
 
 Supported Listener Interfaces
 -----------------------------
 
-The following listener interfaces are supported.
+The following listener interfaces are supported by __barnowl-minew__.  Extend the [Hello barnowl-minew!](#hello-barnowl-minew) example above by pasting in any of the code snippets below.
 
 ### HTTP
 
@@ -99,13 +102,13 @@ server.listen(3001, function() { console.log('Listening on port 3001'); });
 
 let options = { app: app, express: express, route: "/minew",
                 isPreOctetStream: false }; // Set true for G1 firmware v2/3
-barnowl.addListener(BarnowlMinew.HttpListener, options);
+barnowl.addListener(BarnowlMinew, {}, BarnowlMinew.HttpListener, options);
 ```
 
 Nonetheless, for testing purposes, __barnowl-minew__ can also create a minimal HTTP server as an alternative to express, and attempt to handle any POST it receives:
 
 ```javascript
-barnowl.addListener(BarnowlMinew.HttpListener, { port: 3001 });
+barnowl.addListener(BarnowlMinew, {}, BarnowlMinew.HttpListener, { port: 3001 });
 ```
 
 ### Test
@@ -113,7 +116,7 @@ barnowl.addListener(BarnowlMinew.HttpListener, { port: 3001 });
 Provides a steady stream of simulated Minew packets for testing purposes.
 
 ```javascript
-barnowl.addListener(BarnowlMinew.TestListener, {});
+barnowl.addListener(BarnowlMinew, {}, BarnowlMinew.TestListener, {});
 ```
 
 
@@ -148,7 +151,7 @@ Use the following service parameters for the Minew G2 gateway:
 | Upload Interval     | 100 milliseconds (RECOMMENDED)    |
 | Url                 | http://xxx.xxx.xxx.xxx:3001/minew |
 | Authentication Type | none                              |
-| BLE Data Format     | JSON-RAW or MINEW-CONNECT         |
+| BLE Data Format     | MINEW-CONNECT or JSON-RAW         |
 
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
