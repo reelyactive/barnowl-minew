@@ -1,11 +1,11 @@
 barnowl-minew
 =============
 
-__barnowl-minew__ converts the decodings of any ambient Bluetooth Low Energy devices by [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into standard software-developer-friendly JSON that is vendor/technology/application-agnostic.
+__barnowl-minew__ converts the decodings of any ambient Bluetooth Low Energy devices by [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
 ![Overview of barnowl-minew](https://reelyactive.github.io/barnowl-minew/images/overview.png)
 
-__barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-minew) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed below.
+__barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-minew) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
 Getting Started
@@ -15,7 +15,7 @@ Follow our step-by-step tutorials to get started with __barnowl-minew__ or __Par
 - [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/)
 
 Learn "owl" about the __raddec__ JSON data output:
--  [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/).
+-  [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/)
 
 
 Quick Start
@@ -66,11 +66,11 @@ From the same folder as the server.js file, install package dependencies with th
     }
   ],
   packets: [ '001a55daba50e1fe0201060303e1ff1216e1ffa1034affe7004500fa55daba50e1fe' ],
-  timestamp: 1547693457133
+  timestamp: 1645568542222
 }
 ```
 
-See the [Supported Listener Interfaces](#supported-listener-interfaces) below to adapt the code for listen for your gateway(s).
+See the [Supported Listener Interfaces](#supported-listener-interfaces) below to adapt the code to listen for your gateway(s).
 
 
 Is that owl you can do?
