@@ -8,10 +8,13 @@ __barnowl-minew__ converts the decodings of any ambient Bluetooth Low Energy dev
 __barnowl-minew__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-minew) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed below.
 
 
-Installation
-------------
+Getting Started
+---------------
 
-    npm install barnowl-minew
+Follow our step-by-step tutorials to get started using a specific Minew gateway:
+- [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/)
+
+Learn "owl" about the __raddec__ JSON data structure that is output by __barnowl-minew__ using the [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/).
 
 
 Quick Start
@@ -21,7 +24,11 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-See our tutorial [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/).  __barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001/minew and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+__barnowl-minew__ will indiscriminately accept HTTP POSTs on localhost:3001/minew and output (flattened) __raddec__ JSON to the console.  The following Minew data formats are currently supported:
+- BINARY-LONG (recommmended)
+- MINEW-CONNECT
+- JSON-LONG
+- JSON-RAW
 
 
 Hello barnowl-minew!
