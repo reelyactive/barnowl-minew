@@ -1,7 +1,7 @@
 barnowl-minew
 =============
 
-__barnowl-minew__ converts the decodings of any ambient Bluetooth Low Energy devices by [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into standard developer-friendly JSON that is vendor/technology/application-agnostic.
+__barnowl-minew__ converts the decodings of _any_ ambient Bluetooth Low Energy devices by [Minew](https://www.minew.com/) G1, G2, MG3 and MG4 gateways into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
 ![Overview of barnowl-minew](https://reelyactive.github.io/barnowl-minew/images/overview.png)
 
@@ -71,16 +71,6 @@ From the same folder as the server.js file, install package dependencies with th
 ```
 
 See the [Supported Listener Interfaces](#supported-listener-interfaces) below to adapt the code to listen for your gateway(s).
-
-
-Is that owl you can do?
------------------------
-
-While __barnowl-minew__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
-- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
-- [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
-
-These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes a variety of __barnowl-x__ listeners, APIs and interactive web apps.
 
 
 Supported Listener Interfaces
@@ -172,6 +162,16 @@ Use the following service parameters for the Minew MG3 & MG4 gateways:
 For the Url parameter, substitute xxx.xxx.xxx.xxx for the IP address of the server running __barnowl-minew__.
 
 The JSON-LONG data format (which is the default and only option) does not specify the transmitterIdType (public or random address) and therefore the raddec output will always have a transmitterIdType of 0, which represents "unknown".
+
+
+Is that owl you can do?
+-----------------------
+
+While __barnowl-minew__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
+- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
+- [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
+
+These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes a variety of __barnowl-x__ listeners, APIs and interactive web apps.
 
 
 Contributing
