@@ -13,6 +13,8 @@ Getting Started
 
 Follow our step-by-step tutorials to get started with __barnowl-minew__ or __Pareto Anywhere__ using a _specific_ Minew gateway:
 - [Configure a Minew G1 Gateway](https://reelyactive.github.io/diy/minew-g1-config/)
+- [Configure a Minew MG3 Gateway](https://reelyactive.github.io/diy/minew-mg3-config/)
+- [Configure a Minew MG4 Gateway](https://reelyactive.github.io/diy/minew-mg4-config/)
 
 Learn "owl" about the __raddec__ JSON data output:
 -  [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/)
