@@ -1,7 +1,10 @@
 {
   "name": "barnowl-minew",
   "homepage": "https://github.com/reelyactive/barnowl-minew/",
-  "author": "reelyActive <webdev@reelyactive.com>",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
   "description": "Collect and process ambient Bluetooth Low Energy packets from Minew gateways for real-time location and sensing.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
@@ -13,7 +16,7 @@
     "Minew MG4",
     "raddec"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -27,7 +30,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.4.3"
+    "raddec": ">=0.6.0"
   },
   "devDependencies": {},
   "bugs": {
