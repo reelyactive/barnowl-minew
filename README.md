@@ -170,7 +170,7 @@ Is that owl you can do?
 -----------------------
 
 While __barnowl-minew__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
-- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
+- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets, _including those from [Minew beacons](https://www.reelyactive.com/pareto/anywhere/devices/minew/),_ from hexadecimal strings into JSON
 - [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
 
 These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes a variety of __barnowl-x__ listeners, APIs and interactive web apps.
